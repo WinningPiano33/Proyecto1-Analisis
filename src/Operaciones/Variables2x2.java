@@ -4,6 +4,8 @@
  */
 package Operaciones;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author WinningPiano33
@@ -17,6 +19,46 @@ public class Variables2x2 extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+    
+    String nA1, nA2, nRA, nB1, nB2, nRB;
+    int xA1, xA2, xRA, xB1, xB2, xRB;
+    int check;
+    
+    public void setVariables() {
+        nA1 = A1.getText();
+        nA2 = A2.getText();
+        nB1 = B1.getText();
+        nB2 = B2.getText();
+        nRA = RA.getText();
+        nRB = RB.getText();
+        
+        xA1 = Integer.parseInt(nA1);
+        xA2 = Integer.parseInt(nA2);
+        xB1 = Integer.parseInt(nB1);
+        xB2 = Integer.parseInt(nB2);
+    }
+    
+    public void validacionCheck() {
+        if ("0".equals(nA1) || "0".equals(nB2)) {
+            JOptionPane.showMessageDialog(null, "No puede haber ceros en la diagonal.");
+            return;
+        } else if (xA1 < xA2 || xB1 > xB2) {
+            JOptionPane.showMessageDialog(null, "Haz que la matriz sea diagonalmente dominante.");
+            return;
+        } else{
+            try {
+                check = Integer.parseInt(nA1);
+                check = Integer.parseInt(nA2);
+                check = Integer.parseInt(nB1);
+                check = Integer.parseInt(nB2);
+                check = Integer.parseInt(nRA);
+                check = Integer.parseInt(nRB);
+            } catch(NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Inserte valores enteros, y no ningún otro tipo de caracter.");
+                return;
+            }
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,19 +71,18 @@ public class Variables2x2 extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        iv1 = new javax.swing.JTextField();
+        A1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        iv2 = new javax.swing.JTextField();
+        A2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        iv3 = new javax.swing.JTextField();
+        B1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        iv4 = new javax.swing.JTextField();
+        B2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        I1 = new javax.swing.JTextField();
-        I2 = new javax.swing.JTextField();
-        Paso2 = new javax.swing.JButton();
+        RA = new javax.swing.JTextField();
+        RB = new javax.swing.JTextField();
         Calcular2 = new javax.swing.JButton();
         Regresar2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -59,36 +100,35 @@ public class Variables2x2 extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         Regresar = new javax.swing.JButton();
         Calcular = new javax.swing.JButton();
-        Paso = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setToolTipText("");
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
-        iv1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("x1");
+        jLabel1.setText("x₁");
 
-        iv2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        iv2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        A2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setText("x2");
+        jLabel2.setText("x₂");
 
-        iv3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        iv3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        B1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setText("x1");
+        jLabel3.setText("x₁");
 
-        iv4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        iv4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        B2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel4.setText("x2");
+        jLabel4.setText("x₂");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel5.setText("=");
@@ -96,15 +136,18 @@ public class Variables2x2 extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setText("=");
 
-        I1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        I1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        RA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        I2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        I2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        Paso2.setText("Ver paso por paso");
+        RB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        RB.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         Calcular2.setText("Calcular");
+        Calcular2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Calcular2ActionPerformed(evt);
+            }
+        });
 
         Regresar2.setText("Regresar");
         Regresar2.addActionListener(new java.awt.event.ActionListener() {
@@ -118,79 +161,73 @@ public class Variables2x2 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(iv1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(iv3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(iv4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel4))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(iv2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2)))
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(I2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(I1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(Regresar2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(252, 252, 252)
-                        .addComponent(Calcular2))
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(B2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Paso2)
-                        .addGap(74, 74, 74)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(RB, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(RA, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(110, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Regresar2)
+                .addGap(41, 41, 41))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Calcular2)
+                .addGap(218, 218, 218))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(Regresar2)
-                .addGap(55, 55, 55)
+                .addGap(97, 97, 97)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iv1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(A1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(iv2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(A2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel5)
-                    .addComponent(I1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iv3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(iv4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(B2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel6)
-                    .addComponent(I2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(RB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(Calcular2)
-                .addGap(18, 18, 18)
-                .addComponent(Paso2)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(Regresar2)
+                .addGap(23, 23, 23))
         );
 
         jTabbedPane1.addTab("Con Igualdad", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(102, 255, 102));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel7.setText("=");
@@ -242,19 +279,19 @@ public class Variables2x2 extends javax.swing.JFrame {
             }
         });
 
-        Paso.setText("Ver paso por paso");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Regresar)
+                .addGap(39, 39, 39))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(97, 97, 97)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Calcular)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(Regresar))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(V3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                             .addComponent(V1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -271,32 +308,23 @@ public class Variables2x2 extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(v4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel10)))
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(SB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(18, 18, 18)
-                                .addComponent(SA, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
+                                .addComponent(jLabel10)))))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(252, 252, 252)
-                        .addComponent(Calcular))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Paso)
-                        .addGap(74, 74, 74)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(SB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(18, 18, 18)
+                        .addComponent(SA, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(Regresar)
-                .addGap(54, 54, 54)
+                .addGap(97, 97, 97)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(V1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
@@ -312,11 +340,11 @@ public class Variables2x2 extends javax.swing.JFrame {
                     .addComponent(jLabel10)
                     .addComponent(jLabel7)
                     .addComponent(SB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addGap(37, 37, 37)
                 .addComponent(Calcular)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Paso)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(Regresar)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Sin igualdad", jPanel2);
@@ -337,6 +365,7 @@ public class Variables2x2 extends javax.swing.JFrame {
 
     private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_CalcularActionPerformed
 
     private void Regresar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar2ActionPerformed
@@ -350,6 +379,34 @@ public class Variables2x2 extends javax.swing.JFrame {
         b.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_RegresarActionPerformed
+
+    private void Calcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calcular2ActionPerformed
+        // TODO add your handling code here:
+        
+        setVariables();
+        if ("0".equals(nA1) || "0".equals(nB2)) {
+            JOptionPane.showMessageDialog(null, "No puede haber ceros en la diagonal.");
+            return;
+        } else if (xA1 < xA2 || xB1 > xB2) {
+            JOptionPane.showMessageDialog(null, "Haz que la matriz sea diagonalmente dominante.");
+            return;
+        } else{
+            try {
+                check = Integer.parseInt(nA1);
+                check = Integer.parseInt(nA2);
+                check = Integer.parseInt(nB1);
+                check = Integer.parseInt(nB2);
+                check = Integer.parseInt(nRA);
+                check = Integer.parseInt(nRB);
+            } catch(NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Inserte valores enteros, y no ningún otro tipo de caracter.");
+                return;
+            }
+        }
+        RVar2x2 R = new RVar2x2(nA1, nA2, nRA, nB1, nB2, nRB);
+        R.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Calcular2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -387,12 +444,14 @@ public class Variables2x2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField A1;
+    private javax.swing.JTextField A2;
+    private javax.swing.JTextField B1;
+    private javax.swing.JTextField B2;
     private javax.swing.JButton Calcular;
     private javax.swing.JButton Calcular2;
-    private javax.swing.JTextField I1;
-    private javax.swing.JTextField I2;
-    private javax.swing.JButton Paso;
-    private javax.swing.JButton Paso2;
+    private javax.swing.JTextField RA;
+    private javax.swing.JTextField RB;
     private javax.swing.JButton Regresar;
     private javax.swing.JButton Regresar2;
     private javax.swing.JTextField SA;
@@ -400,10 +459,6 @@ public class Variables2x2 extends javax.swing.JFrame {
     private javax.swing.JTextField V1;
     private javax.swing.JTextField V2;
     private javax.swing.JTextField V3;
-    private javax.swing.JTextField iv1;
-    private javax.swing.JTextField iv2;
-    private javax.swing.JTextField iv3;
-    private javax.swing.JTextField iv4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

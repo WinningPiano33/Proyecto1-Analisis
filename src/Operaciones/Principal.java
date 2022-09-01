@@ -38,38 +38,38 @@ public class Principal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel1.setText("MATRICES");
+        jLabel1.setFont(new java.awt.Font("Bodoni MT", 0, 36)); // NOI18N
+        jLabel1.setText("Calculadora de Método Montante");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("SELECCIONE QUE TIPO DE MATRIZ DESEA CALCULAR");
+        jLabel2.setFont(new java.awt.Font("Bodoni MT", 0, 24)); // NOI18N
+        jLabel2.setText("Seleccione el tamaño de la Matriz");
 
-        Boton2x2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Boton2x2.setText("2 X 2");
+        Boton2x2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Boton2x2.setText("2 x 2");
         Boton2x2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton2x2ActionPerformed(evt);
             }
         });
 
-        Boton3x3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Boton3x3.setText("3 X 3");
+        Boton3x3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Boton3x3.setText("3 x 3");
         Boton3x3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton3x3ActionPerformed(evt);
             }
         });
 
-        Boton4x4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Boton4x4.setText("4 X 4");
+        Boton4x4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Boton4x4.setText("4 x 4");
         Boton4x4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton4x4ActionPerformed(evt);
             }
         });
 
-        Boton5x5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Boton5x5.setText("5 X 5");
+        Boton5x5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Boton5x5.setText("5 x 5");
         Boton5x5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton5x5ActionPerformed(evt);
@@ -83,29 +83,28 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
+                        .addGap(118, 118, 118)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Boton3x3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Boton2x2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Boton4x4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton5x5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 151, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(146, 146, 146))
+                            .addComponent(Boton5x5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(49, 49, 49)
+                .addGap(33, 33, 33)
                 .addComponent(Boton2x2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Boton3x3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -113,7 +112,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(Boton4x4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Boton5x5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();

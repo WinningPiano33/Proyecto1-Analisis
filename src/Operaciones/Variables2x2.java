@@ -69,7 +69,6 @@ public class Variables2x2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         A1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -85,25 +84,8 @@ public class Variables2x2 extends javax.swing.JFrame {
         RB = new javax.swing.JTextField();
         Calcular2 = new javax.swing.JButton();
         Regresar2 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        SA = new javax.swing.JTextField();
-        SB = new javax.swing.JTextField();
-        V1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        V3 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        v4 = new javax.swing.JTextField();
-        V2 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        Regresar = new javax.swing.JButton();
-        Calcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jTabbedPane1.setToolTipText("");
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -218,167 +200,38 @@ public class Variables2x2 extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(jLabel6)
                     .addComponent(RB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(Calcular2)
                 .addGap(34, 34, 34)
                 .addComponent(Regresar2)
                 .addGap(23, 23, 23))
         );
 
-        jTabbedPane1.addTab("Con Igualdad", jPanel1);
-
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setText("=");
-
-        SA.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        SA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        SB.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        SB.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        V1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        V1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel8.setText("x1");
-
-        V3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        V3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel9.setText("x1");
-
-        v4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        v4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        V2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        V2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel10.setText("x2");
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel11.setText("x2");
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel12.setText("=");
-
-        Regresar.setText("Regresar");
-        Regresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegresarActionPerformed(evt);
-            }
-        });
-
-        Calcular.setText("Calcular");
-        Calcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CalcularActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Regresar)
-                .addGap(39, 39, 39))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Calcular)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(V3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(V1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addGap(18, 18, 18)
-                                .addComponent(V2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel11))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addComponent(v4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel10)))))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(SB, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel12)
-                        .addGap(18, 18, 18)
-                        .addComponent(SA, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                .addContainerGap(103, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(V1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
-                    .addComponent(V2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(SA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(V3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(v4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel7)
-                    .addComponent(SB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(Calcular)
-                .addGap(36, 36, 36)
-                .addComponent(Regresar)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Sin igualdad", jPanel2);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_CalcularActionPerformed
 
     private void Regresar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regresar2ActionPerformed
         Principal b = new Principal();
         b.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_Regresar2ActionPerformed
-
-    private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        Principal b = new Principal();
-        b.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_RegresarActionPerformed
 
     private void Calcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calcular2ActionPerformed
         // TODO add your handling code here:
@@ -448,32 +301,16 @@ public class Variables2x2 extends javax.swing.JFrame {
     private javax.swing.JTextField A2;
     private javax.swing.JTextField B1;
     private javax.swing.JTextField B2;
-    private javax.swing.JButton Calcular;
     private javax.swing.JButton Calcular2;
     private javax.swing.JTextField RA;
     private javax.swing.JTextField RB;
-    private javax.swing.JButton Regresar;
     private javax.swing.JButton Regresar2;
-    private javax.swing.JTextField SA;
-    private javax.swing.JTextField SB;
-    private javax.swing.JTextField V1;
-    private javax.swing.JTextField V2;
-    private javax.swing.JTextField V3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField v4;
     // End of variables declaration//GEN-END:variables
 }

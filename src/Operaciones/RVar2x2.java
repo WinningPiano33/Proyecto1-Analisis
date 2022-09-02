@@ -142,7 +142,7 @@ public class RVar2x2 extends javax.swing.JFrame {
                 MRB1.setText(" ");
             break;
             case 10:
-                instruccionText.setText("¡El resultado de X1 es " + x + ",y X2 es " + y + "!");
+                instruccionText.setText("¡El resultado de X1 es " + x + ", y X2 es " + y + "!");
                 MRA1.setForeground(Color.pink);
                 MRB2.setForeground(Color.pink);
             break;

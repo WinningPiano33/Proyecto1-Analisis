@@ -31,7 +31,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" min="-2" pref="420" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="jTabbedPane1" min="-2" pref="420" max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -66,154 +69,141 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="A1" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="B1" min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Component id="C1" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="A2" min="-2" pref="58" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="B3" pref="0" max="32767" attributes="0"/>
+                                  <Component id="A3" min="-2" pref="56" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                                      <Component id="iv11" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="iv33" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="iv34" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="iv22" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="iv46" pref="0" max="32767" attributes="0"/>
-                                          <Component id="iv23" min="-2" pref="56" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="iv44" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="iv45" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="iv47" min="-2" pref="56" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
+                                  <Component id="B2" min="-2" pref="58" max="-2" attributes="0"/>
+                                  <Component id="C2" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="14" pref="8" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Calcular3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="C3" min="-2" pref="56" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="14" pref="23" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="I22" alignment="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="I11" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                          <Component id="I23" pref="0" max="32767" attributes="0"/>
+                          <Component id="RB" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="RA" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="RC" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="111" max="32767" attributes="0"/>
+                      <EmptySpace pref="126" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Paso3" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="Calcular3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="11" max="32767" attributes="0"/>
-                      <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv22" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="I11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv23" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="A2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="A1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RA" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="A3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="I22" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RB" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv44" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv33" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="iv46" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="B2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="B1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="B3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="iv34" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="C1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="iv45" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="iv47" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="C2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="C3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="I23" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RC" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="35" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="Calcular3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Paso3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="Regresar2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="iv44">
+            <Component class="javax.swing.JTextField" name="B2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -245,7 +235,7 @@
                 <Property name="text" type="java.lang.String" value="="/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="I11">
+            <Component class="javax.swing.JTextField" name="RA">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -253,23 +243,21 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="I22">
+            <Component class="javax.swing.JTextField" name="RB">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="Paso3">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Ver paso por paso"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="Calcular3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Calcular"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Calcular3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="Regresar2">
               <Properties>
@@ -279,7 +267,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Regresar2ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv11">
+            <Component class="javax.swing.JTextField" name="A1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -294,7 +282,7 @@
                 <Property name="text" type="java.lang.String" value="x1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv22">
+            <Component class="javax.swing.JTextField" name="A2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -310,7 +298,7 @@
                 <Property name="text" type="java.lang.String" value="x2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv33">
+            <Component class="javax.swing.JTextField" name="B1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -326,7 +314,7 @@
                 <Property name="text" type="java.lang.String" value="x1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv34">
+            <Component class="javax.swing.JTextField" name="C1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -350,7 +338,7 @@
                 <Property name="text" type="java.lang.String" value="x2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv45">
+            <Component class="javax.swing.JTextField" name="C2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -366,7 +354,7 @@
                 <Property name="text" type="java.lang.String" value="="/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="I23">
+            <Component class="javax.swing.JTextField" name="RC">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -374,7 +362,7 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv23">
+            <Component class="javax.swing.JTextField" name="A3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -382,7 +370,7 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv46">
+            <Component class="javax.swing.JTextField" name="B3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -390,7 +378,7 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="iv47">
+            <Component class="javax.swing.JTextField" name="C3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="0"/>
@@ -524,7 +512,7 @@
                           <Component id="I12" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
                           <Component id="I24" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="112" max="32767" attributes="0"/>
+                      <EmptySpace pref="147" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
@@ -535,7 +523,7 @@
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="266" max="32767" attributes="0"/>
+                      <EmptySpace pref="295" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

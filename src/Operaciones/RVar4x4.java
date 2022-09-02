@@ -379,6 +379,647 @@ public class RVar4x4 extends javax.swing.JFrame {
                 MRD2.setText("-");
                 MRD3.setText("-");
                 MRD4.setText("-");
+                cambioPivotes();
+                establecerInts();
+            break;
+            case 25:
+                instruccionText.setText("Multiplica los rojos y azules, resta, y divide entre pivote anterior.");
+                B2.setForeground(Color.red);
+                A2.setForeground(Color.blue);
+                
+                A3.setForeground(Color.red);
+                B3.setForeground(Color.blue);
+                
+                iMA3 = obtenerResultado(iB2, iA3, iA2, iB3);
+                MA3.setText(Integer.toString(iMA3));
+                MA3.setForeground(Color.pink);
+            break;
+            case 26:
+                A3.setForeground(Color.black);
+                B3.setForeground(Color.black);
+                
+                A4.setForeground(Color.red);
+                B4.setForeground(Color.blue);
+                
+                iMA4 = obtenerResultado(iB2, iA4, iA2, iB4);
+                MA4.setText(Integer.toString(iMA4));
+                MA4.setForeground(Color.pink);
+            break;
+            case 27:
+                A4.setForeground(Color.black);
+                B4.setForeground(Color.black);
+                
+                RA1.setForeground(Color.red);
+                RB1.setForeground(Color.blue);
+                
+                iMRA1 = obtenerResultado(iB2, iRA1, iA2, iRB1);
+                MRA1.setText(Integer.toString(iMRA1));
+                MRA1.setForeground(Color.pink);
+            break;
+            case 28:
+                RA1.setForeground(Color.black);
+                RB1.setForeground(Color.black);
+                
+                RA2.setForeground(Color.red);
+                RB2.setForeground(Color.blue);
+                
+                iMRA2 = obtenerResultado(iB2, iRA2, iA2, iRB2);
+                MRA2.setText(Integer.toString(iMRA2));
+                MRA2.setForeground(Color.pink);
+            break;
+            case 29:
+                RA2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                
+                RA3.setForeground(Color.red);
+                RB3.setForeground(Color.blue);
+                
+                iMRA3 = obtenerResultado(iB2, iRA3, iA2, iRB3);
+                MRA3.setText(Integer.toString(iMRA3));
+                MRA3.setForeground(Color.pink);
+            break;
+            case 30:
+                RA3.setForeground(Color.black);
+                RB3.setForeground(Color.black);
+                
+                RA4.setForeground(Color.red);
+                RB4.setForeground(Color.blue);
+                
+                iMRA4 = obtenerResultado(iB2, iRA4, iA2, iRB4);
+                MRA4.setText(Integer.toString(iMRA4));
+                MRA4.setForeground(Color.pink);
+            break;
+            case 31:
+                //CAMBIO A C
+                RA4.setForeground(Color.black);
+                RB4.setForeground(Color.black);
+                A2.setForeground(Color.black);
+                
+                C2.setForeground(Color.blue);
+                C3.setForeground(Color.red);
+                B3.setForeground(Color.blue);
+                
+                iMC3 = obtenerResultado(iB2, iC3, iC2, iB3);
+                MC3.setText(Integer.toString(iMC3));
+                MC3.setForeground(Color.pink);
+            break;
+            case 32:
+                C3.setForeground(Color.black);
+                B3.setForeground(Color.black);
+                
+                C4.setForeground(Color.red);
+                B4.setForeground(Color.blue);
+                
+                iMC4 = obtenerResultado(iB2, iC4, iC2, iB4);
+                MC4.setText(Integer.toString(iMC4));
+                MC4.setForeground(Color.pink);
+            break;
+            case 33:
+                C4.setForeground(Color.black);
+                B4.setForeground(Color.black);
+                
+                RC1.setForeground(Color.red);
+                RB1.setForeground(Color.blue);
+                
+                iMRC1 = obtenerResultado(iB2, iRC1, iC2, iRB1);
+                MRC1.setText(Integer.toString(iMRC1));
+                MRC1.setForeground(Color.pink);
+            break;
+            case 34:
+                RC1.setForeground(Color.black);
+                RB1.setForeground(Color.black);
+                
+                RC2.setForeground(Color.red);
+                RB2.setForeground(Color.blue);
+                
+                iMRC2 = obtenerResultado(iB2, iRC2, iC2, iRB2);
+                MRC2.setText(Integer.toString(iMRC2));
+                MRC2.setForeground(Color.pink);
+            break;
+            case 35:
+                RC2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                
+                RC3.setForeground(Color.red);
+                RB3.setForeground(Color.blue);
+                
+                iMRC3 = obtenerResultado(iB2, iRC3, iC2, iRB3);
+                MRC3.setText(Integer.toString(iMRC3));
+                MRC3.setForeground(Color.pink);
+            break;
+            case 36:
+                RC3.setForeground(Color.black);
+                RB3.setForeground(Color.black);
+                
+                RC4.setForeground(Color.red);
+                RB4.setForeground(Color.blue);
+                
+                iMRC4 = obtenerResultado(iB2, iRC4, iC2, iRB4);
+                MRC4.setText(Integer.toString(iMRC4));
+                MRC4.setForeground(Color.pink);
+            break;
+            case 37:
+                //CAMBIO A D
+                RC4.setForeground(Color.black);
+                RB4.setForeground(Color.black);
+                C1.setForeground(Color.black);
+                
+                D2.setForeground(Color.blue);
+                D3.setForeground(Color.red);
+                B3.setForeground(Color.blue);
+                
+                iMD3 = obtenerResultado(iB2, iD3, iD2, iB3);
+                MD3.setText(Integer.toString(iMD3));
+                MD3.setForeground(Color.pink);
+            break;
+            case 38:
+                D3.setForeground(Color.black);
+                B3.setForeground(Color.black);
+                
+                D4.setForeground(Color.red);
+                B4.setForeground(Color.blue);
+                
+                iMD4 = obtenerResultado(iB2, iD4, iD2, iB4);
+                MD4.setText(Integer.toString(iMD4));
+                MD4.setForeground(Color.pink);
+            break;
+            case 39:
+                D4.setForeground(Color.black);
+                B4.setForeground(Color.black);
+                
+                RD1.setForeground(Color.red);
+                RB1.setForeground(Color.blue);
+                
+                iMRD1 = obtenerResultado(iB2, iRD1, iD2, iRB1);
+                MRD1.setText(Integer.toString(iMRD1));
+                MRD1.setForeground(Color.pink);
+            break;
+            case 40:
+                RD1.setForeground(Color.black);
+                RB1.setForeground(Color.black);
+                
+                RD2.setForeground(Color.red);
+                RB2.setForeground(Color.blue);
+                
+                iMRD2 = obtenerResultado(iB2, iRD2, iD2, iRB2);
+                MRD2.setText(Integer.toString(iMRD2));
+                MRD2.setForeground(Color.pink);
+            break;
+            case 41:
+                RD2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                
+                RD3.setForeground(Color.red);
+                RB3.setForeground(Color.blue);
+                
+                iMRD3 = obtenerResultado(iB2, iRD3, iD2, iRB3);
+                MRD3.setText(Integer.toString(iMRD3));
+                MRD3.setForeground(Color.pink);
+            break;
+            case 42:
+                RD3.setForeground(Color.black);
+                RB3.setForeground(Color.black);
+                
+                RD4.setForeground(Color.red);
+                RB4.setForeground(Color.blue);
+                
+                iMRD4 = obtenerResultado(iB2, iRD4, iD2, iRB4);
+                MRD4.setText(Integer.toString(iMRD4));
+                MRD4.setForeground(Color.pink);
+            break;
+            case 43:
+                instruccionText.setText("Se utiliza la segunda matriz para los procedimientos. Se crea una nueva matriz.");
+                backToBlack();
+                swapMatriz();
+                MA1.setText(MC3.getText());
+                MB1.setText("0");
+                MC1.setText("0");
+                MD1.setText("0");
+                MA2.setText("0");
+                MB2.setText(MC3.getText());
+                MC2.setText("0");
+                MD2.setText("0");
+                MA3.setText("0");
+                MB3.setText("0");
+                MD3.setText("0");
+                
+                MA4.setText("-");
+                MB4.setText("-");
+                MD4.setText("-");
+                MRA1.setText("-");
+                MRB1.setText("-");
+                MRD1.setText("-");
+                MRA2.setText("-");
+                MRB2.setText("-");
+                MRD2.setText("-");
+                MRA3.setText("-");
+                MRB3.setText("-");
+                MRD3.setText("-");
+                MRA4.setText("-");
+                MRB4.setText("-");
+                MRD4.setText("-");
+                cambioPivotes();
+                establecerInts();
+            break;
+            case 44:
+                C3.setForeground(Color.red);
+                A3.setForeground(Color.blue);
+                
+                A4.setForeground(Color.red);
+                C4.setForeground(Color.blue);
+                
+                iMA4 = obtenerResultado(iC3, iA4, iA3, iC4);
+                MA4.setText(Integer.toString(iMA4));
+                MA4.setForeground(Color.pink);
+            break;
+            case 45:
+                A4.setForeground(Color.black);
+                C4.setForeground(Color.black);
+                
+                RA1.setForeground(Color.red);
+                RC1.setForeground(Color.blue);
+                
+                iMRA1 = obtenerResultado(iC3, iRA1, iA3, iRC1);
+                MRA1.setText(Integer.toString(iMRA1));
+                MRA1.setForeground(Color.pink);
+            break;
+            case 46:
+                RA1.setForeground(Color.black);
+                RC1.setForeground(Color.black);
+                
+                RA2.setForeground(Color.red);
+                RC2.setForeground(Color.blue);
+                
+                iMRA2 = obtenerResultado(iC3, iRA2, iA3, iRC2);
+                MRA2.setText(Integer.toString(iMRA2));
+                MRA2.setForeground(Color.pink);
+            break;
+            case 47:
+                RA2.setForeground(Color.black);
+                RC2.setForeground(Color.black);
+                
+                RA3.setForeground(Color.red);
+                RC3.setForeground(Color.blue);
+                
+                iMRA3 = obtenerResultado(iC3, iRA3, iA3, iRC3);
+                MRA3.setText(Integer.toString(iMRA3));
+                MRA3.setForeground(Color.pink);
+            break;
+            case 48:
+                RA3.setForeground(Color.black);
+                RC3.setForeground(Color.black);
+                
+                RA4.setForeground(Color.red);
+                RC4.setForeground(Color.blue);
+                
+                iMRA4 = obtenerResultado(iC3, iRA4, iA3, iRC4);
+                MRA4.setText(Integer.toString(iMRA4));
+                MRA4.setForeground(Color.pink);
+            break;
+            case 49:
+                //CAMBIO A B
+                RA4.setForeground(Color.black);
+                RC4.setForeground(Color.black);
+                A3.setForeground(Color.black);
+                
+                B3.setForeground(Color.blue);
+                B4.setForeground(Color.red);
+                C4.setForeground(Color.blue);
+                
+                iMB4 = obtenerResultado(iC3, iB4, iB3, iC4);
+                MB4.setText(Integer.toString(iMB4));
+                MB4.setForeground(Color.pink);
+            break;
+            case 50:
+                B4.setForeground(Color.black);
+                C4.setForeground(Color.black);
+                
+                RB1.setForeground(Color.red);
+                RC1.setForeground(Color.blue);
+                
+                iMRB1 = obtenerResultado(iC3, iRB1, iB3, iRC1);
+                MRB1.setText(Integer.toString(iMRB1));
+                MRB1.setForeground(Color.pink);
+            break;
+            case 51:
+                RB1.setForeground(Color.black);
+                RC1.setForeground(Color.black);
+                
+                RB2.setForeground(Color.red);
+                RC2.setForeground(Color.blue);
+                
+                iMRB2 = obtenerResultado(iC3, iRB2, iB3, iRC2);
+                MRB2.setText(Integer.toString(iMRB2));
+                MRB2.setForeground(Color.pink);
+            break;
+            case 52:
+                RB2.setForeground(Color.black);
+                RC2.setForeground(Color.black);
+                
+                RB3.setForeground(Color.red);
+                RC3.setForeground(Color.blue);
+                
+                iMRB3 = obtenerResultado(iC3, iRB3, iB3, iRC3);
+                MRB3.setText(Integer.toString(iMRB3));
+                MRB3.setForeground(Color.pink);
+            break;
+            case 53:
+                RB3.setForeground(Color.black);
+                RC3.setForeground(Color.black);
+                
+                RB4.setForeground(Color.red);
+                RC4.setForeground(Color.blue);
+                
+                iMRB4 = obtenerResultado(iC3, iRB4, iB3, iRC4);
+                MRB4.setText(Integer.toString(iMRB4));
+                MRB4.setForeground(Color.pink);
+            break;
+            case 54:
+                //CAMBIO A D
+                RB4.setForeground(Color.black);
+                RC4.setForeground(Color.black);
+                B1.setForeground(Color.black);
+                
+                D3.setForeground(Color.blue);
+                D4.setForeground(Color.red);
+                C4.setForeground(Color.blue);
+                
+                iMD4 = obtenerResultado(iC3, iD4, iD3, iC4);
+                MD4.setText(Integer.toString(iMD4));
+                MD4.setForeground(Color.pink);
+            break;
+            case 55:
+                D4.setForeground(Color.black);
+                C4.setForeground(Color.black);
+                
+                RD1.setForeground(Color.red);
+                RC1.setForeground(Color.blue);
+                
+                iMRD1 = obtenerResultado(iC3, iRD1, iD3, iRC1);
+                MRD1.setText(Integer.toString(iMRD1));
+                MRD1.setForeground(Color.pink);
+            break;
+            case 56:
+                RD1.setForeground(Color.black);
+                RC1.setForeground(Color.black);
+                
+                RD2.setForeground(Color.red);
+                RC2.setForeground(Color.blue);
+                
+                iMRD2 = obtenerResultado(iC3, iRD2, iD3, iRC2);
+                MRD2.setText(Integer.toString(iMRD2));
+                MRD2.setForeground(Color.pink);
+            break;
+            case 57:
+                RD2.setForeground(Color.black);
+                RC2.setForeground(Color.black);
+                
+                RD3.setForeground(Color.red);
+                RC3.setForeground(Color.blue);
+                
+                iMRD3 = obtenerResultado(iC3, iRD3, iD3, iRC3);
+                MRD3.setText(Integer.toString(iMRD3));
+                MRD3.setForeground(Color.pink);
+            break;
+            case 58:
+                RD3.setForeground(Color.black);
+                RC3.setForeground(Color.black);
+                
+                RD4.setForeground(Color.red);
+                RC4.setForeground(Color.blue);
+                
+                iMRD4 = obtenerResultado(iC3, iRD4, iD3, iRC4);
+                MRD4.setText(Integer.toString(iMRD4));
+                MRD4.setForeground(Color.pink);
+            break;
+            case 59:
+                instruccionText.setText("Se utiliza la segunda matriz para los procedimientos. Se crea una nueva matriz.");
+                backToBlack();
+                swapMatriz();
+                MA1.setText(MD4.getText());
+                MA2.setText("0");
+                MA3.setText("0");
+                MA4.setText("0");
+                MB1.setText("0");
+                MB2.setText(MD4.getText());
+                MB3.setText("0");
+                MB4.setText("0");
+                MC1.setText("0");
+                MC2.setText("0");
+                MC3.setText(MD4.getText());
+                MC4.setText("0");
+                MD1.setText("0");
+                MD2.setText("0");
+                MD3.setText("0");
+                
+                MRA1.setText("-");
+                MRA2.setText("-");
+                MRA3.setText("-");
+                MRA4.setText("-");
+                MRB1.setText("-");
+                MRB2.setText("-");
+                MRB3.setText("-");
+                MRB3.setText("-");
+                MRC1.setText("-");
+                MRC2.setText("-");
+                MRC3.setText("-");
+                MRC4.setText("-");
+                cambioPivotes();
+                establecerInts();
+            break;
+            case 60:
+                instruccionText.setText("Multiplica los rojos y azules, resta, y divide entre pivote anterior.");
+                D4.setForeground(Color.red);
+                A4.setForeground(Color.blue);
+                
+                RA1.setForeground(Color.red);
+                RD1.setForeground(Color.blue);
+                
+                iMRA1 = obtenerResultado(iD4, iRA1, iA4, iRD1);
+                MRA1.setText(Integer.toString(iMRA1));
+                MRA1.setForeground(Color.pink);
+            break;
+            case 61:
+                instruccionText.setText("Multiplica los rojos y azules, resta, y divide entre pivote anterior.");
+                RA1.setForeground(Color.black);
+                RD1.setForeground(Color.black);
+                
+                RA2.setForeground(Color.red);
+                RD2.setForeground(Color.blue);
+                
+                iMRA2 = obtenerResultado(iD4, iRA2, iA4, iRD2);
+                MRA2.setText(Integer.toString(iMRA2));
+                MRA2.setForeground(Color.pink);
+            break;
+            case 62:
+                RA2.setForeground(Color.black);
+                RD2.setForeground(Color.black);
+                
+                RA3.setForeground(Color.red);
+                RD3.setForeground(Color.blue);
+                
+                iMRA3 = obtenerResultado(iD4, iRA3, iA4, iRD3);
+                MRA3.setText(Integer.toString(iMRA3));
+                MRA3.setForeground(Color.pink);
+            break;
+            case 63:
+                RA3.setForeground(Color.black);
+                RD3.setForeground(Color.black);
+                
+                RA4.setForeground(Color.red);
+                RD4.setForeground(Color.blue);
+                
+                iMRA4 = obtenerResultado(iD4, iRA4, iA4, iRD4);
+                MRA4.setText(Integer.toString(iMRA4));
+                MRA4.setForeground(Color.pink);
+            break;
+            case 64:
+                //CAMBIO A B
+                RA4.setForeground(Color.black);
+                RD4.setForeground(Color.black);
+                A4.setForeground(Color.black);
+                
+                B4.setForeground(Color.blue);
+                RB1.setForeground(Color.red);
+                RD1.setForeground(Color.blue);
+                
+                iMRB1 = obtenerResultado(iD4, iRB1, iB4, iRD1);
+                MRB1.setText(Integer.toString(iMRB1));
+                MRB1.setForeground(Color.pink);
+            break;
+            case 65:
+                RB1.setForeground(Color.black);
+                RD1.setForeground(Color.black);
+                
+                RB2.setForeground(Color.red);
+                RD2.setForeground(Color.blue);
+                
+                iMRB2 = obtenerResultado(iD4, iRB2, iB4, iRD2);
+                MRB2.setText(Integer.toString(iMRB2));
+                MRB2.setForeground(Color.pink);
+            break;
+            case 66:
+                RB2.setForeground(Color.black);
+                RD2.setForeground(Color.black);
+                
+                RB3.setForeground(Color.red);
+                RD3.setForeground(Color.blue);
+                
+                iMRB3 = obtenerResultado(iD4, iRB3, iB4, iRD3);
+                MRB3.setText(Integer.toString(iMRB3));
+                MRB3.setForeground(Color.pink);
+            break;
+            case 67:
+                RB3.setForeground(Color.black);
+                RD3.setForeground(Color.black);
+                
+                RB4.setForeground(Color.red);
+                RD4.setForeground(Color.blue);
+                
+                iMRB4 = obtenerResultado(iD4, iRB4, iB4, iRD4);
+                MRB4.setText(Integer.toString(iMRB4));
+                MRB4.setForeground(Color.pink);
+            break;
+            case 68:
+                //CAMBIO A C
+                RB4.setForeground(Color.black);
+                RD4.setForeground(Color.black);
+                B4.setForeground(Color.black);
+                
+                C4.setForeground(Color.red);
+                RC1.setForeground(Color.red);
+                RD1.setForeground(Color.blue);
+                
+                iMRC1 = obtenerResultado(iD4, iRC1, iC4, iRD1);
+                MRC1.setText(Integer.toString(iMRC1));
+                MRC1.setForeground(Color.pink);
+            break;
+            case 69:
+                RC1.setForeground(Color.black);
+                RD1.setForeground(Color.black);
+                
+                RC2.setForeground(Color.red);
+                RD2.setForeground(Color.blue);
+                
+                iMRC2 = obtenerResultado(iD4, iRC2, iC4, iRD2);
+                MRC2.setText(Integer.toString(iMRC2));
+                MRC2.setForeground(Color.pink);
+            break;
+            case 70:
+                RC2.setForeground(Color.black);
+                RD2.setForeground(Color.black);
+                
+                RC3.setForeground(Color.red);
+                RD3.setForeground(Color.blue);
+                
+                iMRC3 = obtenerResultado(iD4, iRC3, iC4, iRD3);
+                MRC3.setText(Integer.toString(iMRC3));
+                MRC3.setForeground(Color.pink);
+            break;
+            case 71:
+                RC3.setForeground(Color.black);
+                RD3.setForeground(Color.black);
+                
+                RC4.setForeground(Color.red);
+                RD4.setForeground(Color.blue);
+                
+                iMRC4 = obtenerResultado(iD4, iRC4, iC4, iRD4);
+                MRC4.setText(Integer.toString(iMRC4));
+                MRC4.setForeground(Color.pink);
+            break;
+            case 72:
+                instruccionText.setText("Se utiliza la segunda matriz para su examinación.");
+                backToBlack();
+                swapMatriz();
+                allBlankInMirror();
+            break;
+            case 73:
+                instruccionText.setText("Sumamos valores y dividimos por la determinante.");
+                MA1.setText("1");
+                MB2.setText("1");
+                MC3.setText("1");
+                MD4.setText("1");
+                MA2.setText("0");
+                MA3.setText("0");
+                MA4.setText("0");
+                MB1.setText("0");
+                MB3.setText("0");
+                MB4.setText("0");
+                MC1.setText("0");
+                MC2.setText("0");
+                MC4.setText("0");
+                MD1.setText("0");
+                MD2.setText("0");
+                MD3.setText("0");
+                
+                establecerInts();
+                resultadoFinal(iA1, iRA1, iRA2, iRA3, iRA4,
+                        iB2, iRB1, iRB2, iRB3, iRB4,
+                        iC3, iRC1, iRC2, iRC3, iRC4,
+                        iD4, iRD1, iRD2, iRD3, iRD4);
+                MRA1.setText(Integer.toString(x));
+                MRB2.setText(Integer.toString(y));
+                MRC3.setText(Integer.toString(z));
+                MRD4.setText(Integer.toString(w));
+                MRA2.setText(" ");
+                MRA3.setText(" ");
+                MRA4.setText(" ");
+                MRB1.setText(" ");
+                MRB3.setText(" ");
+                MRB4.setText(" ");
+                MRC1.setText(" ");
+                MRC2.setText(" ");
+                MRC4.setText(" ");
+                MRD1.setText(" ");
+                MRD2.setText(" ");
+                MRD3.setText(" ");
+            break;
+            case 74:
+                instruccionText.setText("¡El resultado de X1 es " + x + ", X2 es " + y + ", X3 es " + z + ", y X4 es " + w + "!");
+                MRA1.setForeground(Color.pink);
+                MRB2.setForeground(Color.pink);
+                MRC3.setForeground(Color.pink);
+                MRD4.setForeground(Color.pink);
             break;
         }
     }
@@ -667,34 +1308,34 @@ public class RVar4x4 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        A1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A1.setText("0");
 
-        MRB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB1.setText("0");
 
-        A2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A2.setText("0");
 
-        RA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA1.setText("0");
 
-        MRB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB2.setText("0");
 
-        B1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B1.setText("0");
 
-        RA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA2.setText("0");
 
-        B2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B2.setText("0");
 
-        RB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB1.setText("0");
 
-        RB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB2.setText("0");
 
         regresarButton.setText("Regresar");
@@ -719,13 +1360,13 @@ public class RVar4x4 extends javax.swing.JFrame {
         pivActLabel.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         pivActLabel.setText("0");
 
-        MA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA1.setText("0");
 
-        MA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA2.setText("0");
 
-        MRA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA1.setText("0");
 
         SigPaso.setText("Siguiente Paso");
@@ -735,7 +1376,7 @@ public class RVar4x4 extends javax.swing.JFrame {
             }
         });
 
-        MB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB1.setText("0");
 
         OmiPaso.setText("Omitir Pasos");
@@ -745,466 +1386,474 @@ public class RVar4x4 extends javax.swing.JFrame {
             }
         });
 
-        MRA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA2.setText("0");
 
-        MB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB2.setText("0");
 
-        A3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A3.setText("0");
 
-        A4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A4.setText("0");
 
-        B3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B3.setText("0");
 
-        B4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B4.setText("0");
 
-        C2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C2.setText("0");
 
-        D1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        D1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         D1.setText("0");
 
-        C3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C3.setText("0");
 
-        D2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        D2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         D2.setText("0");
 
-        C4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C4.setText("0");
 
-        D3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        D3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         D3.setText("0");
 
-        D4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        D4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         D4.setText("0");
 
-        C1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C1.setText("0");
 
-        RA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA3.setText("0");
 
-        RA4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA4.setText("0");
 
-        RB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB3.setText("0");
 
-        RB4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB4.setText("0");
 
-        RC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC1.setText("0");
 
-        RC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC2.setText("0");
 
-        RD1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RD1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RD1.setText("0");
 
-        RD2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RD2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RD2.setText("0");
 
-        RC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC3.setText("0");
 
-        RD3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RD3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RD3.setText("0");
 
-        RC4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC4.setText("0");
 
-        RD4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RD4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RD4.setText("0");
 
-        MA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA3.setText("0");
 
-        MB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB3.setText("0");
 
-        MA4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA4.setText("0");
 
-        MB4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB4.setText("0");
 
-        MC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC1.setText("0");
 
-        MD1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MD1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MD1.setText("0");
 
-        MC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC2.setText("0");
 
-        MD2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MD2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MD2.setText("0");
 
-        MC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC3.setText("0");
 
-        MD3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MD3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MD3.setText("0");
 
-        MC4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC4.setText("0");
 
-        MD4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MD4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MD4.setText("0");
 
-        MRA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA3.setText("0");
 
-        MRB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB3.setText("0");
 
-        MRA4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA4.setText("0");
 
-        MRB4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB4.setText("0");
 
-        MRC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC1.setText("0");
 
-        MRD1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRD1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRD1.setText("0");
 
-        MRC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC2.setText("0");
 
-        MRD2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRD2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRD2.setText("0");
 
-        MRC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC3.setText("0");
 
-        MRD3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRD3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRD3.setText("0");
 
-        MRC4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC4.setText("0");
 
-        MRD4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRD4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRD4.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 393, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(SigPaso)
-                        .addGap(124, 124, 124)
-                        .addComponent(OmiPaso, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(293, 293, 293)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(regresarButton)
-                    .addComponent(pivActLabel))
-                .addGap(32, 32, 32))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jLabel2)
-                        .addGap(28, 28, 28)
-                        .addComponent(pivAntLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(B1)
-                                    .addComponent(A1))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(B2)
-                                    .addComponent(A2))
-                                .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(B3)
-                                    .addComponent(A3))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(B4)
-                                    .addComponent(A4)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(D1)
-                                    .addComponent(C1))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(D2)
-                                    .addComponent(C2))
-                                .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(D3)
-                                    .addComponent(C3))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(D4)
-                                    .addComponent(C4))))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RD1)
-                                    .addComponent(RC1))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RC2)
-                                    .addComponent(RD2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RD3)
-                                    .addComponent(RC3))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RC4)
-                                    .addComponent(RD4)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RB1)
-                                    .addComponent(RA1))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(RA2)
-                                    .addComponent(RB2))
-                                .addGap(31, 31, 31)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(RA3)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(B1)
+                                            .addComponent(A1))
                                         .addGap(40, 40, 40)
-                                        .addComponent(RA4))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(B2)
+                                            .addComponent(A2))
+                                        .addGap(37, 37, 37)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(B3)
+                                            .addComponent(A3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(B4)
+                                            .addComponent(A4)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(RB3)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(D1)
+                                            .addComponent(C1))
                                         .addGap(40, 40, 40)
-                                        .addComponent(RB4)))))
-                        .addGap(166, 166, 166)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MB1)
-                            .addComponent(MA1)
-                            .addComponent(MD1)
-                            .addComponent(MC1))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MB2)
-                            .addComponent(MA2)
-                            .addComponent(MD2)
-                            .addComponent(MC2))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(D2)
+                                            .addComponent(C2))
+                                        .addGap(37, 37, 37)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(D3)
+                                            .addComponent(C3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(D4)
+                                            .addComponent(C4))))
+                                .addGap(55, 55, 55)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RD1)
+                                            .addComponent(RC1))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RC2)
+                                            .addComponent(RD2))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RD3)
+                                            .addComponent(RC3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RC4)
+                                            .addComponent(RD4)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RB1)
+                                            .addComponent(RA1))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(RA2)
+                                            .addComponent(RB2))
+                                        .addGap(31, 31, 31)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(RA3)
+                                                .addGap(40, 40, 40)
+                                                .addComponent(RA4))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(RB3)
+                                                .addGap(40, 40, 40)
+                                                .addComponent(RB4)))))
+                                .addGap(112, 112, 112)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MB3)
-                                    .addComponent(MA3))
+                                    .addComponent(MB1)
+                                    .addComponent(MA1)
+                                    .addComponent(MD1)
+                                    .addComponent(MC1))
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MB4)
-                                    .addComponent(MA4)))
-                            .addGroup(layout.createSequentialGroup()
+                                    .addComponent(MB2)
+                                    .addComponent(MA2)
+                                    .addComponent(MD2)
+                                    .addComponent(MC2))
+                                .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MD3)
-                                    .addComponent(MC3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MB3)
+                                            .addComponent(MA3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MB4)
+                                            .addComponent(MA4)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MD3)
+                                            .addComponent(MC3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MD4)
+                                            .addComponent(MC4))))
+                                .addGap(49, 49, 49)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(MRB1)
+                                    .addComponent(MRA1)
+                                    .addComponent(MRD1)
+                                    .addComponent(MRC1))
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MD4)
-                                    .addComponent(MC4))))
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MRB1)
-                            .addComponent(MRA1)
-                            .addComponent(MRD1)
-                            .addComponent(MRC1))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(MRB2)
-                            .addComponent(MRA2)
-                            .addComponent(MRD2)
-                            .addComponent(MRC2))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(MRB2)
+                                    .addComponent(MRA2)
+                                    .addComponent(MRD2)
+                                    .addComponent(MRC2))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MRB3)
+                                            .addComponent(MRA3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MRB4)
+                                            .addComponent(MRA4)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MRD3)
+                                            .addComponent(MRC3))
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(MRD4)
+                                            .addComponent(MRC4)))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRB3)
-                                    .addComponent(MRA3))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRB4)
-                                    .addComponent(MRA4)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRD3)
-                                    .addComponent(MRC3))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRD4)
-                                    .addComponent(MRC4)))))
+                                .addComponent(jLabel2)
+                                .addGap(28, 28, 28)
+                                .addComponent(pivAntLabel)
+                                .addGap(116, 116, 116)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(pivActLabel)
+                                .addGap(177, 177, 177))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(239, 239, 239)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(131, 131, 131)
+                                .addComponent(SigPaso)
+                                .addGap(124, 124, 124)
+                                .addComponent(OmiPaso, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(90, 90, 90))
+                            .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(235, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(regresarButton)
+                .addGap(141, 141, 141))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(A1)
+                                    .addComponent(A2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(B1)
+                                    .addComponent(B2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(A3)
+                                    .addComponent(A4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(B3)
+                                    .addComponent(B4)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RA1)
+                                    .addComponent(RA2)
+                                    .addComponent(RA3)
+                                    .addComponent(RA4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RB1)
+                                    .addComponent(RB2)
+                                    .addComponent(RB3)
+                                    .addComponent(RB4))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(C1)
+                                    .addComponent(C2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(D1)
+                                    .addComponent(D2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(C3)
+                                    .addComponent(C4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(D3)
+                                    .addComponent(D4)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RC1)
+                                    .addComponent(RC2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RD1)
+                                    .addComponent(RD2)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RC3)
+                                    .addComponent(RC4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(RD3)
+                                    .addComponent(RD4)))))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(A1)
-                                        .addComponent(A2))
+                                        .addComponent(MA1)
+                                        .addComponent(MA2))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(B1)
-                                        .addComponent(B2)))
+                                        .addComponent(MB1)
+                                        .addComponent(MB2)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(A3)
-                                        .addComponent(A4))
+                                        .addComponent(MA3)
+                                        .addComponent(MA4))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(B3)
-                                        .addComponent(B4)))
+                                        .addComponent(MB3)
+                                        .addComponent(MB4)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(RA1)
-                                        .addComponent(RA2)
-                                        .addComponent(RA3)
-                                        .addComponent(RA4))
+                                        .addComponent(MRA1)
+                                        .addComponent(MRA2))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(RB1)
-                                        .addComponent(RB2)
-                                        .addComponent(RB3)
-                                        .addComponent(RB4))))
+                                        .addComponent(MRB1)
+                                        .addComponent(MRB2))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(MA1)
-                                    .addComponent(MA2))
+                                    .addComponent(MRA3)
+                                    .addComponent(MRA4))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(MB1)
-                                    .addComponent(MB2))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(MA3)
-                                .addComponent(MA4))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(MB3)
-                                .addComponent(MB4)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(MRA1)
-                                .addComponent(MRA2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(MRB1)
-                                .addComponent(MRB2))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(MRA3)
-                            .addComponent(MRA4))
+                                    .addComponent(MRB3)
+                                    .addComponent(MRB4))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(MRB3)
-                            .addComponent(MRB4))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MC3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MD3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MC4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MD4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(C1)
-                            .addComponent(C2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(D1)
-                            .addComponent(D2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(C3)
-                            .addComponent(C4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(D3)
-                            .addComponent(D4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RC1)
-                            .addComponent(RC2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RD1)
-                            .addComponent(RD2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RC3)
-                            .addComponent(RC4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RD3)
-                            .addComponent(RD4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MC1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MD1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MC2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MD2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MRC1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MRD1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MRC2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MRD2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MRC3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MRD3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MRC4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MRD4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MC3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MD3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MC4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MD4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MC1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MD1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MC2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MD2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MRC1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MRD1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MRC2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MRD2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MRC3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MRD3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(MRC4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MRD4)))))
+                .addGap(110, 110, 110)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel1)
-                    .addComponent(pivAntLabel)
-                    .addComponent(pivActLabel))
-                .addGap(50, 50, 50)
+                    .addComponent(pivActLabel)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(pivAntLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SigPaso)
-                    .addComponent(OmiPaso)
-                    .addComponent(regresarButton))
-                .addGap(34, 34, 34))
+                    .addComponent(OmiPaso))
+                .addGap(18, 18, 18)
+                .addComponent(regresarButton)
+                .addGap(43, 43, 43))
         );
 
         pack();

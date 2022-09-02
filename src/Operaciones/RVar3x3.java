@@ -5,6 +5,8 @@
  */
 package Operaciones;
 
+import java.awt.Color;
+
 /**
  *
  * @author GUILLERMO
@@ -18,7 +20,28 @@ public class RVar3x3 extends javax.swing.JFrame {
         initComponents();
     }
     
-    int iA1, iA2, iA3, iRA1, iRA2, IRA3, iB1, iB2, iB3, iRB1, iRB2, iRB3,
+    public RVar3x3(String cA1, String cA2, String cA3, String cRA,
+            String cB1, String cB2, String cB3, String cRB,
+            String cC1, String cC2, String cC3, String cRC) {
+        initComponents();
+        A1.setText(cA1);
+        A2.setText(cA2);
+        A3.setText(cA3);
+        RA1.setText(cRA);
+        B1.setText(cB1);
+        B2.setText(cB2);
+        B3.setText(cB3);
+        RB2.setText(cRB);
+        C1.setText(cC1);
+        C2.setText(cC2);
+        C3.setText(cC3);
+        RC3.setText(cRC);
+        
+        pivActLabel.setText(A1.getText());
+        pAct = Integer.parseInt(A1.getText());
+    }
+    
+    int iA1, iA2, iA3, iRA1, iRA2, iRA3, iB1, iB2, iB3, iRB1, iRB2, iRB3,
             iC1, iC2, iC3, iRC1, iRC2, iRC3,
             iMA1, iMA2, iMA3, iMRA1, iMRA2, iMRA3, iMB1, iMB2, iMB3, iMRB1, iMRB2, iMRB3,
             iMC1, iMC2, iMC3, iMRC1, iMRC2, iMRC3;
@@ -27,8 +50,513 @@ public class RVar3x3 extends javax.swing.JFrame {
     
     int x, y, z;
     
-    private void procedimiento(int paso) {
-        //
+    public void procedimiento(int paso) {
+        switch(paso) {
+            case 1:
+                instruccionText.setText("Prepara la otra matriz a trabajar.");
+                MA1.setText(A1.getText());
+                MA2.setText(A2.getText());
+                MA3.setText(A3.getText());
+                MRA1.setText(RA1.getText());
+                MRA2.setText(RA2.getText());
+                MRA3.setText(RA3.getText());
+                MB1.setText("0");
+                MB2.setText("-");
+                MB3.setText("-");
+                MRB1.setText("-");
+                MRB2.setText("-");
+                MRB3.setText("-");
+                MC1.setText("0");
+                MC2.setText("-");
+                MC3.setText("-");
+                MRC1.setText("-");
+                MRC2.setText("-");
+                MRC3.setText("-");
+                establecerInts();
+            break;
+            case 2:
+                A1.setForeground(Color.red);
+                B1.setForeground(Color.blue);
+                B2.setForeground(Color.red);
+                A2.setForeground(Color.blue);
+                
+                iMB2 = obtenerResultado(iA1, iB2, iB1, iA2);
+                MB2.setText(Integer.toString(iMB2));
+                MB2.setForeground(Color.pink);
+            break;
+            case 3:
+                B2.setForeground(Color.black);
+                A2.setForeground(Color.black);
+                
+                B3.setForeground(Color.red);
+                A3.setForeground(Color.blue);
+                
+                iMB3 = obtenerResultado(iA1, iB3, iB1, iA3);
+                MB3.setText(Integer.toString(iMB3));
+                MB3.setForeground(Color.pink);
+            break;
+            case 4:
+                B3.setForeground(Color.black);
+                A3.setForeground(Color.black);
+                
+                RB1.setForeground(Color.red);
+                RA1.setForeground(Color.blue);
+                
+                iMRB1 = obtenerResultado(iA1, iRB1, iB1, iRA1);
+                MRB1.setText(Integer.toString(iMRB1));
+                MRB1.setForeground(Color.pink);
+            break;
+            case 5:
+                RB1.setForeground(Color.black);
+                RA1.setForeground(Color.black);
+                
+                RB2.setForeground(Color.red);
+                RA2.setForeground(Color.blue);
+                
+                iMRB2 = obtenerResultado(iA1, iRB2, iB1, iRA2);
+                MRB2.setText(Integer.toString(iMRB2));
+                MRB2.setForeground(Color.pink);
+            break;
+            case 6:
+                RB2.setForeground(Color.black);
+                RA2.setForeground(Color.black);
+                
+                RB3.setForeground(Color.red);
+                RA3.setForeground(Color.blue);
+                
+                iMRB3 = obtenerResultado(iA1, iRB3, iB1, iRA3);
+                MRB3.setText(Integer.toString(iMRB3));
+                MRB3.setForeground(Color.pink);
+            break;
+            case 7:
+                //CAMBIO A C
+                RB3.setForeground(Color.black);
+                RA3.setForeground(Color.black);
+                B1.setForeground(Color.black);
+                
+                C1.setForeground(Color.blue);
+                C2.setForeground(Color.red);
+                A2.setForeground(Color.blue);
+                
+                iMC2 = obtenerResultado(iA1, iC2, iC1, iA2);
+                MC2.setText(Integer.toString(iMC2));
+                MC2.setForeground(Color.pink);
+            break;
+            case 8:
+                C2.setForeground(Color.black);
+                A2.setForeground(Color.black);
+                
+                C3.setForeground(Color.red);
+                A3.setForeground(Color.blue);
+                
+                iMC3 = obtenerResultado(iA1, iC3, iC1, iA3);
+                MC3.setText(Integer.toString(iMC3));
+                MC3.setForeground(Color.pink);
+            break;
+            case 9:
+                C3.setForeground(Color.black);
+                A3.setForeground(Color.black);
+                
+                RC1.setForeground(Color.red);
+                RA1.setForeground(Color.blue);
+                
+                iMRC1 = obtenerResultado(iA1, iRC1, iC1, iRA1);
+                MRC1.setText(Integer.toString(iMRC1));
+                MRC1.setForeground(Color.pink);
+            break;
+            case 10:
+                RC1.setForeground(Color.black);
+                RA1.setForeground(Color.black);
+                
+                RC2.setForeground(Color.red);
+                RA2.setForeground(Color.blue);
+                
+                iMRC2 = obtenerResultado(iA1, iRC2, iC1, iRA2);
+                MRC2.setText(Integer.toString(iMRC2));
+                MRC2.setForeground(Color.pink);
+            break;
+            case 11:
+                RC2.setForeground(Color.black);
+                RA2.setForeground(Color.black);
+                
+                RC3.setForeground(Color.red);
+                RA3.setForeground(Color.blue);
+                
+                iMRC3 = obtenerResultado(iA1, iRC3, iC1, iRA3);
+                MRC3.setText(Integer.toString(iMRC3));
+                MRC3.setForeground(Color.pink);
+            break;
+            case 12:
+                instruccionText.setText("Se utiliza la segunda matriz para los procedimientos. Se crea una nueva matriz.");
+                backToBlack();
+                swapMatriz();
+                MA1.setText(MB2.getText());
+                MB1.setText("0");
+                MC1.setText("0");
+                MA2.setText("0");
+                MC2.setText("0");
+                
+                MA3.setText("-");
+                MRA1.setText("-");
+                MRA2.setText("-");
+                MRA3.setText("-");
+                MC3.setText("-");
+                MRC1.setText("-");
+                MRC2.setText("-");
+                MRC3.setText("-");
+                cambioPivotes();
+                establecerInts();
+            break;
+            case 13:
+                instruccionText.setText("Multiplica los rojos y azules, resta, y divide entre pivote anterior.");
+                B2.setForeground(Color.red);
+                A2.setForeground(Color.blue);
+                
+                A3.setForeground(Color.red);
+                B3.setForeground(Color.blue);
+                
+                iMA3 = obtenerResultado(iB2, iA3, iA2, iB3);
+                MA3.setText(Integer.toString(iMA3));
+                MA3.setForeground(Color.pink);
+            break;
+            case 14:
+                A3.setForeground(Color.black);
+                B3.setForeground(Color.black);
+                
+                RA1.setForeground(Color.red);
+                RB1.setForeground(Color.blue);
+                
+                iMRA1 = obtenerResultado(iB2, iRA1, iA2, iRB1);
+                MRA1.setText(Integer.toString(iMRA1));
+                MRA1.setForeground(Color.pink);
+            break;
+            case 15:
+                RA1.setForeground(Color.black);
+                RB1.setForeground(Color.black);
+                
+                RA2.setForeground(Color.red);
+                RB2.setForeground(Color.blue);
+                
+                iMRA2 = obtenerResultado(iB2, iRA2, iA2, iRB2);
+                MRA2.setText(Integer.toString(iMRA2));
+                MRA2.setForeground(Color.pink);
+            break;
+            case 16:
+                RA2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                
+                RA3.setForeground(Color.red);
+                RB3.setForeground(Color.blue);
+                
+                iMRA3 = obtenerResultado(iB2, iRA3, iA2, iRB3);
+                MRA3.setText(Integer.toString(iMRA3));
+                MRA3.setForeground(Color.pink);
+            break;
+            case 17:
+                //CAMBIO A C
+                RA2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                A2.setForeground(Color.black);
+                
+                C2.setForeground(Color.blue);
+                C3.setForeground(Color.red);
+                B3.setForeground(Color.blue);
+                
+                iMC3 = obtenerResultado(iB2, iC3, iC2, iB3);
+                MC3.setText(Integer.toString(iMC3));
+                MC3.setForeground(Color.pink);
+            break;
+            case 18:
+                C3.setForeground(Color.black);
+                B3.setForeground(Color.black);
+                
+                RC1.setForeground(Color.red);
+                RB1.setForeground(Color.blue);
+                
+                iMRC1 = obtenerResultado(iB2, iRC1, iC2, iRB1);
+                MRC1.setText(Integer.toString(iMRC1));
+                MRC1.setForeground(Color.pink);
+            break;
+            case 19:
+                RC1.setForeground(Color.black);
+                RB1.setForeground(Color.black);
+                
+                RC2.setForeground(Color.red);
+                RB2.setForeground(Color.blue);
+                
+                iMRC2 = obtenerResultado(iB2, iRC2, iC2, iRB2);
+                MRC2.setText(Integer.toString(iMRC2));
+                MRC2.setForeground(Color.pink);
+            break;
+            case 20:
+                RC2.setForeground(Color.black);
+                RB2.setForeground(Color.black);
+                
+                RC3.setForeground(Color.red);
+                RB3.setForeground(Color.blue);
+                
+                iMRC3 = obtenerResultado(iB2, iRC3, iC2, iRB3);
+                MRC3.setText(Integer.toString(iMRC3));
+                MRC3.setForeground(Color.pink);
+            break;
+            case 21:
+                instruccionText.setText("Se utiliza la segunda matriz para los procedimientos. Se crea una nueva matriz.");
+                backToBlack();
+                swapMatriz();
+                MA1.setText(MC3.getText());
+                MB1.setText("0");
+                MC1.setText("0");
+                MA2.setText("0");
+                MB2.setText(MC3.getText());
+                MC2.setText("0");
+                MA3.setText("0");
+                MB3.setText("0");
+                
+                MRA1.setText("-");
+                MRA2.setText("-");
+                MRA3.setText("-");
+                MRB1.setText("-");
+                MRB2.setText("-");
+                MRB3.setText("-");
+                cambioPivotes();
+                establecerInts();
+            break;
+            case 22:
+                instruccionText.setText("Multiplica los rojos y azules, resta, y divide entre pivote anterior.");
+                C3.setForeground(Color.red);
+                A3.setForeground(Color.blue);
+                
+                RA1.setForeground(Color.red);
+                RC1.setForeground(Color.blue);
+                
+                iMRA1 = obtenerResultado(iC3, iRA1, iA3, iRC1);
+                MRA1.setText(Integer.toString(iMRA1));
+                MRA1.setForeground(Color.pink);
+            break;
+            case 23:
+                RA1.setForeground(Color.black);
+                RC1.setForeground(Color.black);
+                
+                RA2.setForeground(Color.red);
+                RC2.setForeground(Color.blue);
+                
+                iMRA2 = obtenerResultado(iC3, iRA2, iA3, iRC2);
+                MRA2.setText(Integer.toString(iMRA2));
+                MRA2.setForeground(Color.pink);
+            break;
+            case 24:
+                RA2.setForeground(Color.black);
+                RC2.setForeground(Color.black);
+                
+                RA3.setForeground(Color.red);
+                RC3.setForeground(Color.blue);
+                
+                iMRA3 = obtenerResultado(iC3, iRA3, iA3, iRC3);
+                MRA3.setText(Integer.toString(iMRA3));
+                MRA3.setForeground(Color.pink);
+            break;
+            case 25:
+                //CAMBIO A B
+                RA3.setForeground(Color.black);
+                RC3.setForeground(Color.black);
+                A3.setForeground(Color.black);
+                
+                B3.setForeground(Color.blue);
+                RB1.setForeground(Color.red);
+                RC1.setForeground(Color.blue);
+                
+                iMRB1 = obtenerResultado(iC3, iRB1, iB3, iRC1);
+                MRB1.setText(Integer.toString(iMRB1));
+                MRB1.setForeground(Color.pink);
+            break;
+            case 26:
+                RB1.setForeground(Color.black);
+                RC1.setForeground(Color.black);
+                
+                RB2.setForeground(Color.red);
+                RC2.setForeground(Color.blue);
+                
+                iMRB2 = obtenerResultado(iC3, iRB2, iB3, iRC2);
+                MRB2.setText(Integer.toString(iMRB2));
+                MRB2.setForeground(Color.pink);
+            break;
+            case 27:
+                RB2.setForeground(Color.black);
+                RC2.setForeground(Color.black);
+                
+                RB3.setForeground(Color.red);
+                RC3.setForeground(Color.blue);
+                
+                iMRB3 = obtenerResultado(iC3, iRB3, iB3, iRC3);
+                MRB3.setText(Integer.toString(iMRB3));
+                MRB3.setForeground(Color.pink);
+            break;
+            case 28:
+                instruccionText.setText("Se utiliza la segunda matriz para su examinación.");
+                backToBlack();
+                swapMatriz();
+                allBlankInMirror();
+            break;
+            case 29:
+                instruccionText.setText("Sumamos valores y dividimos por la determinante.");
+                MA1.setText("1");
+                MB2.setText("1");
+                MC3.setText("1");
+                MA2.setText("0");
+                MA3.setText("0");
+                MB1.setText("0");
+                MB3.setText("0");
+                MC1.setText("0");
+                MC2.setText("0");
+                
+                establecerInts();
+                resultadoFinal(iA1, iRA1, iRA2, iRA3,
+                        iB2, iRB1, iRB2, iRB3,
+                        iC3, iRC1, iRC2, iRC3);
+                MRA1.setText(Integer.toString(x));
+                MRB2.setText(Integer.toString(y));
+                MRC3.setText(Integer.toString(z));
+                MRA2.setText(" ");
+                MRA3.setText(" ");
+                MRB1.setText(" ");
+                MRB3.setText(" ");
+                MRC1.setText(" ");
+                MRC2.setText(" ");
+            break;
+            case 30:
+                instruccionText.setText("¡El resultado de X1 es " + x + ", X2 es " + y + ", X3 es " + z + "!");
+                MRA1.setForeground(Color.pink);
+                MRB2.setForeground(Color.pink);
+                MRC3.setForeground(Color.pink);
+            break;
+        }
+    }
+    
+    public void backToBlack() {
+        A1.setForeground(Color.black);
+        A2.setForeground(Color.black);
+        A3.setForeground(Color.black);
+        B1.setForeground(Color.black);
+        B2.setForeground(Color.black);
+        B3.setForeground(Color.black);
+        C1.setForeground(Color.black);
+        C2.setForeground(Color.black);
+        C3.setForeground(Color.black);
+        RA1.setForeground(Color.black);
+        RA2.setForeground(Color.black);
+        RA3.setForeground(Color.black);
+        RB1.setForeground(Color.black);
+        RB2.setForeground(Color.black);
+        RB3.setForeground(Color.black);
+        RC1.setForeground(Color.black);
+        RC2.setForeground(Color.black);
+        RC3.setForeground(Color.black);
+        
+        MA1.setForeground(Color.black);
+        MA2.setForeground(Color.black);
+        MA3.setForeground(Color.black);
+        MB1.setForeground(Color.black);
+        MB2.setForeground(Color.black);
+        MB3.setForeground(Color.black);
+        MC1.setForeground(Color.black);
+        MC2.setForeground(Color.black);
+        MC3.setForeground(Color.black);
+        MRA1.setForeground(Color.black);
+        MRA2.setForeground(Color.black);
+        MRA3.setForeground(Color.black);
+        MRB1.setForeground(Color.black);
+        MRB2.setForeground(Color.black);
+        MRB3.setForeground(Color.black);
+        MRC1.setForeground(Color.black);
+        MRC2.setForeground(Color.black);
+        MRC3.setForeground(Color.black);
+    }
+    
+    public void allBlankInMirror() {
+        MA1.setText("-");
+        MA2.setText("-");
+        MA3.setText("-");
+        MB1.setText("-");
+        MB2.setText("-");
+        MB3.setText("-");
+        MC1.setText("-");
+        MC2.setText("-");
+        MC3.setText("-");
+        MRA1.setText("-");
+        MRA2.setText("-");
+        MRA3.setText("-");
+        MRB1.setText("-");
+        MRB2.setText("-");
+        MRB3.setText("-");
+        MRC1.setText("-");
+        MRC2.setText("-");
+        MRC3.setText("-");
+    }
+    
+    public void swapMatriz() {
+        A1.setText(MA1.getText());
+        A2.setText(MA2.getText());
+        A3.setText(MA3.getText());
+        B1.setText(MB1.getText());
+        B2.setText(MB2.getText());
+        B3.setText(MB3.getText());
+        C1.setText(MC1.getText());
+        C2.setText(MC2.getText());
+        C3.setText(MC3.getText());
+        
+        RA1.setText(MRA1.getText());
+        RA2.setText(MRA2.getText());
+        RA3.setText(MRA3.getText());
+        RB1.setText(MRB1.getText());
+        RB2.setText(MRB2.getText());
+        RB3.setText(MRB3.getText());
+        RC1.setText(MRC1.getText());
+        RC2.setText(MRC2.getText());
+        RC3.setText(MRC3.getText());
+    }
+    
+    public void cambioPivotes() {
+        pAnt = pAct;
+        pAct = Integer.parseInt(MA1.getText());
+        pivAntLabel.setText(Integer.toString(pAnt));
+        pivActLabel.setText(Integer.toString(pAct));
+    }
+    
+    public void establecerInts() {
+        iA1 = Integer.parseInt(A1.getText());
+        iA2 = Integer.parseInt(A2.getText());
+        iA3 = Integer.parseInt(A3.getText());
+        iB1 = Integer.parseInt(B1.getText());
+        iB2 = Integer.parseInt(B2.getText());
+        iB3 = Integer.parseInt(B3.getText());
+        iC1 = Integer.parseInt(C1.getText());
+        iC2 = Integer.parseInt(C2.getText());
+        iC3 = Integer.parseInt(C3.getText());
+        iRA1 = Integer.parseInt(RA1.getText());
+        iRA2 = Integer.parseInt(RA2.getText());
+        iRA3 = Integer.parseInt(RA3.getText());
+        iRB1 = Integer.parseInt(RB1.getText());
+        iRB2 = Integer.parseInt(RB2.getText());
+        iRB3 = Integer.parseInt(RB3.getText());
+        iRC1 = Integer.parseInt(RC1.getText());
+        iRC2 = Integer.parseInt(RC2.getText());
+        iRC3 = Integer.parseInt(RC3.getText());
+        
+        pAnt = Integer.parseInt(pivAntLabel.getText());
+    }
+    
+    public int obtenerResultado(int a, int b, int c, int d) {
+        int resultado = (((a)*(b)) - ((c)*(d))) / pAnt;
+        
+        return resultado;
+    }
+    
+    public void resultadoFinal(int a, int ra1, int ra2, int ra3,
+            int b, int rb1, int rb2, int rb3,
+            int c, int rc1, int rc2, int rc3) {
+        x = (ra1 + ra2 + ra3) / a; 
+        y = (rb1 + rb2 + rb3) / b; 
+        z = (rc1 + rc2 + rc3) / c; 
     }
 
     /**
@@ -87,34 +615,34 @@ public class RVar3x3 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        A1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A1.setText("0");
 
-        MRB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB1.setText("0");
 
-        A2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A2.setText("0");
 
-        RA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA1.setText("0");
 
-        MRB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB2.setText("0");
 
-        B1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B1.setText("0");
 
-        RA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA2.setText("0");
 
-        B2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B2.setText("0");
 
-        RB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB1.setText("0");
 
-        RB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB2.setText("0");
 
         regresarButton.setText("Regresar");
@@ -139,13 +667,13 @@ public class RVar3x3 extends javax.swing.JFrame {
         pivActLabel.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         pivActLabel.setText("0");
 
-        MA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA1.setText("0");
 
-        MA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA2.setText("0");
 
-        MRA1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA1.setText("0");
 
         SigPaso.setText("Siguiente Paso");
@@ -155,7 +683,7 @@ public class RVar3x3 extends javax.swing.JFrame {
             }
         });
 
-        MB1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB1.setText("0");
 
         OmiPaso.setText("Omitir Pasos");
@@ -165,70 +693,70 @@ public class RVar3x3 extends javax.swing.JFrame {
             }
         });
 
-        MRA2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA2.setText("0");
 
-        MB2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB2.setText("0");
 
-        C1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C1.setText("0");
 
-        C2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C2.setText("0");
 
-        C3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        C3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         C3.setText("0");
 
-        A3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        A3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         A3.setText("0");
 
-        B3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        B3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         B3.setText("0");
 
-        RC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC1.setText("0");
 
-        RC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC2.setText("0");
 
-        RC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RC3.setText("0");
 
-        RA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RA3.setText("0");
 
-        RB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        RB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         RB3.setText("0");
 
-        MA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MA3.setText("0");
 
-        MB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MB3.setText("0");
 
-        MRA3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRA3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRA3.setText("0");
 
-        MRB3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRB3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRB3.setText("0");
 
-        MC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC1.setText("0");
 
-        MC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC2.setText("0");
 
-        MC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MC3.setText("0");
 
-        MRC1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC1.setText("0");
 
-        MRC2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC2.setText("0");
 
-        MRC3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        MRC3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         MRC3.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -236,110 +764,102 @@ public class RVar3x3 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(69, 69, 69)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(C1)
+                    .addComponent(B1)
+                    .addComponent(A1))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(C2)
+                        .addGap(30, 30, 30)
+                        .addComponent(C3))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(C1)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(C2)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(C3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(B1)
-                                            .addComponent(A1))
-                                        .addGap(40, 40, 40)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(B2)
-                                            .addComponent(A2))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(B3)
-                                            .addComponent(A3))))
-                                .addGap(56, 56, 56)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(RB1)
-                                            .addComponent(RA1))
-                                        .addGap(40, 40, 40)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(RB2)
-                                            .addComponent(RA2)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(RC1)
-                                        .addGap(40, 40, 40)
-                                        .addComponent(RC2)))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(RC3)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(RB3)
-                                        .addComponent(RA3)))
-                                .addGap(157, 157, 157)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(MB1)
-                                            .addComponent(MA1))
-                                        .addGap(29, 29, 29)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(MB2)
-                                            .addComponent(MA2))
-                                        .addGap(29, 29, 29)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(MB3)
-                                            .addComponent(MA3)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(MC1)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(MC2)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(MC3)))
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRB1)
-                                    .addComponent(MRA1)
-                                    .addComponent(MRC1))
-                                .addGap(31, 31, 31)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRC2)
-                                    .addComponent(MRB2)
-                                    .addComponent(MRA2))
-                                .addGap(27, 27, 27)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MRB3)
-                                    .addComponent(MRA3)
-                                    .addComponent(MRC3)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(100, 100, 100)
-                                .addComponent(jLabel2)
-                                .addGap(28, 28, 28)
-                                .addComponent(pivAntLabel))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                            .addComponent(B2)
+                            .addComponent(A2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(B3)
+                            .addComponent(A3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(197, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(SigPaso)
+                        .addGap(18, 18, 18)
+                        .addComponent(OmiPaso, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(180, 180, 180)
+                        .addComponent(regresarButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(18, 18, 18))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(SigPaso)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(OmiPaso, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(138, 138, 138)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(regresarButton)
-                                    .addComponent(pivActLabel)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(68, 68, 68)))))
-                .addGap(32, 32, 32))
+                                .addComponent(jLabel2)
+                                .addGap(28, 28, 28)
+                                .addComponent(pivAntLabel)
+                                .addGap(62, 62, 62)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(pivActLabel))
+                            .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(80, 80, 80)))
+                .addGap(175, 175, 175))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RB1)
+                    .addComponent(RA1)
+                    .addComponent(RC1))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RB2)
+                    .addComponent(RA2)
+                    .addComponent(RC2))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(RC3)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(RB3)
+                        .addComponent(RA3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MB1)
+                            .addComponent(MA1))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MB2)
+                            .addComponent(MA2))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(MB3)
+                            .addComponent(MA3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(MC1)
+                        .addGap(29, 29, 29)
+                        .addComponent(MC2)
+                        .addGap(29, 29, 29)
+                        .addComponent(MC3)))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MRB1)
+                    .addComponent(MRA1)
+                    .addComponent(MRC1))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MRC2)
+                    .addComponent(MRB2)
+                    .addComponent(MRA2))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MRB3)
+                    .addComponent(MRA3)
+                    .addComponent(MRC3))
+                .addGap(128, 128, 128))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -348,24 +868,11 @@ public class RVar3x3 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(A1)
-                                        .addComponent(A2))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(B1)
-                                        .addComponent(B2)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(A3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(B3)))
+                            .addComponent(A1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(C1)
-                                .addComponent(C2)
-                                .addComponent(C3)))
+                            .addComponent(B1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(C1))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(MRA3)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -397,47 +904,61 @@ public class RVar3x3 extends javax.swing.JFrame {
                                     .addComponent(MC1)
                                     .addComponent(MC2))
                                 .addComponent(MC3))
-                            .addComponent(MRC1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(MRC2))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(MRC1)
+                                .addComponent(MRC2))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(MRA2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(MRB2))
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(RA1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RB1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RC1))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RA1)
-                                    .addComponent(RA2))
+                                .addComponent(RA2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RB1)
-                                    .addComponent(RB2)))
+                                .addComponent(RB2))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(RA3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(RB3)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(RC1)
                             .addComponent(RC2)
-                            .addComponent(RC3))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                            .addComponent(RC3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(A2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(B2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(A3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(B3)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(C2)
+                            .addComponent(C3))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1)
                     .addComponent(pivAntLabel)
                     .addComponent(pivActLabel))
-                .addGap(54, 54, 54)
+                .addGap(55, 55, 55)
                 .addComponent(instruccionText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SigPaso)
                     .addComponent(OmiPaso)
                     .addComponent(regresarButton))
-                .addGap(34, 34, 34))
+                .addGap(42, 42, 42))
         );
 
         pack();
@@ -445,7 +966,7 @@ public class RVar3x3 extends javax.swing.JFrame {
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed
         // TODO add your handling code here:
-        Variables2x2 b = new Variables2x2();
+        Variables3x3 b = new Variables3x3();
         b.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_regresarButtonActionPerformed
@@ -458,7 +979,7 @@ public class RVar3x3 extends javax.swing.JFrame {
 
     private void OmiPasoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OmiPasoMouseClicked
         // TODO add your handling code here:
-        for(int i=paso;paso <= 10;paso++) {
+        for(int i=paso;paso <= 30;paso++) {
             procedimiento(paso);
         }
     }//GEN-LAST:event_OmiPasoMouseClicked

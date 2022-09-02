@@ -32,7 +32,6 @@ public class Principal extends javax.swing.JFrame {
         Boton2x2 = new javax.swing.JButton();
         Boton3x3 = new javax.swing.JButton();
         Boton4x4 = new javax.swing.JButton();
-        Boton5x5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 255));
@@ -68,14 +67,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        Boton5x5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Boton5x5.setText("5 x 5");
-        Boton5x5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Boton5x5ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,8 +84,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Boton3x3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Boton2x2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton4x4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton5x5, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Boton4x4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -110,9 +100,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(Boton3x3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Boton4x4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Boton5x5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,12 +123,6 @@ public class Principal extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_Boton4x4ActionPerformed
-
-    private void Boton5x5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton5x5ActionPerformed
-        Variables5x5 a = new Variables5x5();
-        a.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Boton5x5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,7 +163,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton Boton2x2;
     private javax.swing.JButton Boton3x3;
     private javax.swing.JButton Boton4x4;
-    private javax.swing.JButton Boton5x5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
